@@ -7,6 +7,7 @@ var pug = require("gulp-pug");
 var prefixer = require("gulp-autoprefixer");
 var browserSync = require("browser-sync").create();
 var newer = require("gulp-newer");
+var runSequence = require("run-sequence");
 
 gulp.task('sass', function() {
   return gulp.src("src/scss/**/*.+(scss|sass)")
@@ -50,4 +51,8 @@ gulp.task('serve', function() {
   gulp.watch("src/views/**/*.pug", ['views']);
   gulp.watch("src/js/**/*.js").on('change', browserSync.reload);
   gulp.watch("src/**/*.html").on('change', browserSync.reload)
+});
+
+gulp.task('default', function(cb) {
+  runSequence(['sass', 'views'], 'serve', cb);
 });
