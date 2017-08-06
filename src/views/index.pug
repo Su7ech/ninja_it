@@ -4,29 +4,11 @@ block title
 block append styles
   link(rel="stylesheet", href="css/home.css")
 block content
-  nav.navbar.navbar-inverse.navbar-fixed-top
-    .container
-      .navbar-header
-        button(type="button", data-toggle="collapse", data-target="#navbar", aria-expanded="false", aria-controls="navbar").navbar-toggle.collapsed
-          span.sr-only Toggle navigation
-          span.icon-bar
-          span.icon-bar
-          span.icon-bar
-        a.navbar-brand(href="#") Thomas Baroody
-      .navbar-collapse.collapse(id="navbar")
-        ul.nav.navbar-nav.navbar-right
-          li.active: a(href="#") Home
-          li: a(href="#") About
-          li: a(href="#") Services
-          li: a(href="#") Contact
-  header.jumbotron.intro
-    .container
-      .row
-        img(src="http://via.placeholder.com/200x200", alt="placeholder").intro-portrait
-      .row
-        .intro-title
-          br
-          p.text-center Hello everyone my name is Thomas Baroody, and I like to create websites and fix computers!
+  include includes/_nav.pug
+  include includes/_jumbotron.pug
+  include includes/_portfolio.pug
+  include includes/_contact.pug
+  include includes/_footer.pug
 block scripts
   script(src="js/jquery.js")
   script(src="js/bootstrap.js")
