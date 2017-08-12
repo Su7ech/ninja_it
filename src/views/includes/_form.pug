@@ -1,0 +1,23 @@
+form.form-horizontal.well(role="form", method="post", action="")
+  .form-group
+    label(for="name").col-sm-2.control-label Name
+    .col-sm-10
+      input(type="text", id="name", name="name", placeholder="First & Last Name").form-control
+    
+  .form-group
+    label(for="eamil").col-sm-2.control-label Eamil
+    .col-sm-10
+      input(type="text", id="eamil", name="email", placeholder="example@domain.com").form-control  
+
+  .form-group
+    label(for="name").col-sm-2.control-label Message
+    .col-sm-10
+      textarea(rows="4", type="text", name="message", placeholder="Type your message here...").form-control
+  
+  .form-group
+    .col-sm-10.col-sm-offset-2
+      input(id="submit", name="submit", type="submit", value="Submit").btn.btn-primary.btn-lg
+
+  .form-group
+    .col-sm-10.col-sm-offset-2
+      <! I will be used to display an alert to the user>

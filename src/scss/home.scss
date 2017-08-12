@@ -5,7 +5,7 @@ html {
     margin-bottom: 60px;
   }
 }
-.intro {
+header.intro {
   .intro-portrait {
     display: block;
     margin: 0 auto;
@@ -16,7 +16,15 @@ html {
     padding: 0 10px;
   }
 }
-.footer {
+section.contact {
+  legend {
+    margin-bottom: 20px;
+  }
+  .form-group {
+    margin-bottom: 15px;
+  }
+}
+footer.footer {
   position: absolute;
   bottom: 0;
   width: 100%;
